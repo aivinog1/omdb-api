@@ -10,7 +10,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run: mvn verify
+        run: mvn verify -Pqulice
       - name: Setup Ruby for use with actions
         uses: actions/setup-ruby@v1.0.0
         with:

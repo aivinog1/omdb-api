@@ -39,7 +39,10 @@ import org.aivinog1.omdb.api.movie.writer.Writers;
  * @since 0.0.1
  * @todo #5:30m We need to implement this interface.
  *  It should work with a movie.
+ * @todo #6:30m Consider to refactor it interface
+ *  and remove disabling check for too many methods.
  */
+@SuppressWarnings("PMD.TooManyMethods")
 public interface Movie {
     /**
      * A movie's title.
