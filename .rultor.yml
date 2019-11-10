@@ -1,1 +1,12 @@
-# @todo #1:30m Let's integrate with Rultor. We need this to check this PR before merge.
+docker:
+  image: yegor256/java8
+install: |
+  sudo gem install --no-rdoc --no-ri pdd
+  sudo gem install --no-rdoc --no-ri xcop
+architect:
+  - aivinog1
+merge:
+  script: |
+    pdd --file=/dev/null
+    mvn clean install -Pqulice
+# @todo #3:30m Let's create a deploy and release stage. The artifact should be deployed in some public maven repository.
