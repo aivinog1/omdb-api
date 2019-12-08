@@ -22,12 +22,10 @@
  * SOFTWARE.
  */
 /**
- * This is a base package for an actor.
- * In this package we can get an {@link org.aivinog1.omdb.api.movie.actor.Actor}
- * from {@link org.aivinog1.omdb.api.movie.actor.Actors} variety.
+ * This is a base package to work with a movie writer.
  *
- * @author aivinog1
- * @version 0.0.1
+ * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
+ * @version $Id$
  * @since 0.0.1
  */
-package org.aivinog1.omdb.api.movie.actor;
+package org.aivinog1.omdb.api.movie.contributor.writer;

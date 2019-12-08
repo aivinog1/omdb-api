@@ -21,23 +21,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.writer;
 /**
- * Use this interface to work with
- * a numerous {@link org.aivinog1.omdb.api.movie.writer.Writer}.
- *
- * @author Alexey Vingoradov (vinogradov.a.i.93@gmail.com)
- * @version $Id$
- * @see org.aivinog1.omdb.api.movie.writer.Writer
- * @since 0.0.1
- * @todo #5:30m Needs to implement this interface.
- *  It should work with numerous movie writers.
+ * This is a base package for work with movie contributors,
+ * such as {@link org.aivinog1.omdb.api.movie.contributor.actor.Actors},
+ * {@link org.aivinog1.omdb.api.movie.contributor.writer.Writers},
+ * {@link org.aivinog1.omdb.api.movie.contributor.director.Directors}, etc.
  */
-public interface Writers {
-    /**
-     * Iterate through existing movie writers.
-     *
-     * @return The iterable of a movie writers.
-     */
-    Iterable<Writer> iterate();
-}
+package org.aivinog1.omdb.api.movie.contributor;

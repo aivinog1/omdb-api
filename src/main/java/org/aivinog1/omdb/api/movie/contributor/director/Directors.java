@@ -21,21 +21,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.writer;
+package org.aivinog1.omdb.api.movie.contributor.director;
+
 /**
- * This is a base class to work with a movie writer.
+ * This is interface for working with a numerous of
+ * {@link org.aivinog1.omdb.api.movie.contributor.director.Director}.
  *
  * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.writer.Writers
+ * @see org.aivinog1.omdb.api.movie.contributor.director.Director
  * @since 0.0.1
- * @todo #5:30m Needs to implement this interface.
- *  It should represent a movie writer.
+ * @todo #5:30m We needs to implements this class.
+ *  It should work with numerous of
+ *  {@link org.aivinog1.omdb.api.movie.contributor.director.Director}
  */
-public interface Writer {
+public interface Directors {
     /**
-     * Writer's name.
-     * @return String representation a writer's name.
+     * Iterate over existing directors.
+     *
+     * @return Iterable over directors.
      */
-    String name();
+    Iterable<Director> iterate();
 }

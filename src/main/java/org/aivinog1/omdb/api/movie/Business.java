@@ -21,35 +21,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.rating;
+package org.aivinog1.omdb.api.movie;
+
 /**
- * This is a base interface to interact with a
- * {@link org.aivinog1.omdb.api.movie.rating.Rating}.
+ * This is a basic interface to working with a movie business info.
  *
  * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.rating.Rating
+ * @see org.aivinog1.omdb.api.movie.Movie
  * @since 0.0.1
- * @todo #5:30m Let's implement this method.
- *  It should works with a numerous ratings.
+ * @todo #5:30m We need to implement this interface.
+ *  It should work with a movie business info.
  */
-public interface Ratings {
+public interface Business {
     /**
-     * Iterating through Ratings.
+     * A movie's box office in USD.
      *
-     * @return An available rating.
+     * @return A string representation of a movie's box office.
      */
-    Iterable<Rating> iterate();
+    String boxOffice();
     /**
-     * A movie rating. E.G. PG-13.
+     * Production company.
      *
-     * @return A string representation of a movie's rating.
+     * @return A string that is a movie production company.
      */
-    String rated();
-    /**
-     * Votes of a movie.
-     *
-     * @return A string representation of movie's votes.
-     */
-    String votes();
+    String production();
 }

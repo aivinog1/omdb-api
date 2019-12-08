@@ -24,11 +24,9 @@
 package org.aivinog1.omdb.api.movie;
 
 import java.net.URL;
-import org.aivinog1.omdb.api.movie.actor.Actors;
-import org.aivinog1.omdb.api.movie.director.Directors;
+import org.aivinog1.omdb.api.movie.contributor.Contributors;
 import org.aivinog1.omdb.api.movie.genre.Genres;
 import org.aivinog1.omdb.api.movie.rating.Ratings;
-import org.aivinog1.omdb.api.movie.writer.Writers;
 
 /**
  * This is a basic interface to working with a movie.
@@ -39,10 +37,7 @@ import org.aivinog1.omdb.api.movie.writer.Writers;
  * @since 0.0.1
  * @todo #5:30m We need to implement this interface.
  *  It should work with a movie.
- * @todo #6:30m Consider to refactor it interface
- *  and remove disabling check for too many methods.
  */
-@SuppressWarnings("PMD.TooManyMethods")
 public interface Movie {
     /**
      * A movie's title.
@@ -50,24 +45,6 @@ public interface Movie {
      * @return A string representation of a movie's title.
      */
     String title();
-    /**
-     * Year of movie was or would be released.
-     *
-     * @return A string representation of a movie's title.
-     */
-    String year();
-    /**
-     * A movie rating. E.G. PG-13.
-     *
-     * @return A string representation of a movie's rating.
-     */
-    String rated();
-    /**
-     * Release date.
-     *
-     * @return A string representation of a release date.
-     */
-    String released();
     /**
      * A movie's runtime in minutes.
      *
@@ -81,23 +58,11 @@ public interface Movie {
      */
     Genres genres();
     /**
-     * A movie {@link org.aivinog1.omdb.api.movie.director.Directors}.
+     * Movie contributors. Such as actors, directors, etc.
      *
-     * @return Directors of a movie.
+     * @return A movie contributors.
      */
-    Directors directors();
-    /**
-     * A movie {@link org.aivinog1.omdb.api.movie.writer.Writers}.
-     *
-     * @return Writers of a movie.
-     */
-    Writers writers();
-    /**
-     * A movie {@link org.aivinog1.omdb.api.movie.actor.Actors}.
-     *
-     * @return Actors that participate in a movie.
-     */
-    Actors actors();
+    Contributors contributors();
     /**
      * Plot.
      *
@@ -117,39 +82,21 @@ public interface Movie {
      */
     Ratings ratings();
     /**
-     * Votes of a movie.
+     * A movie coordinate, i.e. IMDB identfier, website, etc.
      *
-     * @return A string representation of movie's votes.
+     * @return A movie coordinates.
      */
-    String votes();
+    Coordinate coordinate();
     /**
-     * IMDB's movie identifier.
+     * A movie dates. I.e. release on dvd date.
      *
-     * @return A string representation of IDMB movie identifier.
+     * @return A movie dates.
      */
-    String identifier();
+    Dates dates();
     /**
-     * Date of release DVD with that movie.
+     * A movie business information. I.e. production company.
      *
-     * @return A string representation of movie DVD date.
+     * @return A movie business information.
      */
-    String dvdDate();
-    /**
-     * A movie's box office in USD.
-     *
-     * @return A string representation of a movie's box office.
-     */
-    String boxOffice();
-    /**
-     * Production company.
-     *
-     * @return A string that is a movie production company.
-     */
-    String production();
-    /**
-     * A movie website.
-     *
-     * @return A string representation of a movie website.
-     */
-    String webSite();
+    Business business();
 }

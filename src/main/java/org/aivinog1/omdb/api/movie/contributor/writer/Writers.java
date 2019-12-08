@@ -21,35 +21,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.rating;
+package org.aivinog1.omdb.api.movie.contributor.writer;
 /**
- * This is a base interface to interact with a
- * {@link org.aivinog1.omdb.api.movie.rating.Rating}.
+ * Use this interface to work with
+ * a numerous {@link org.aivinog1.omdb.api.movie.contributor.writer.Writer}.
  *
- * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
+ * @author Alexey Vingoradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.rating.Rating
+ * @see org.aivinog1.omdb.api.movie.contributor.writer.Writer
  * @since 0.0.1
- * @todo #5:30m Let's implement this method.
- *  It should works with a numerous ratings.
+ * @todo #5:30m Needs to implement this interface.
+ *  It should work with numerous movie writers.
  */
-public interface Ratings {
+public interface Writers {
     /**
-     * Iterating through Ratings.
+     * Iterate through existing movie writers.
      *
-     * @return An available rating.
+     * @return The iterable of a movie writers.
      */
-    Iterable<Rating> iterate();
-    /**
-     * A movie rating. E.G. PG-13.
-     *
-     * @return A string representation of a movie's rating.
-     */
-    String rated();
-    /**
-     * Votes of a movie.
-     *
-     * @return A string representation of movie's votes.
-     */
-    String votes();
+    Iterable<Writer> iterate();
 }

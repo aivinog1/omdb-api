@@ -21,11 +21,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+package org.aivinog1.omdb.api.movie;
+
 /**
- * This is a base package for a director.
+ * This is a basic interface to working with a movie dates.
+ * For example: dvd release date.
+ *
  * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.director.Directors
+ * @see org.aivinog1.omdb.api.movie.Movie
  * @since 0.0.1
+ * @todo #5:30m We need to implement this interface.
+ *  It should work with movie dates.
  */
-package org.aivinog1.omdb.api.movie.director;
+public interface Dates {
+    /**
+     * Release date.
+     *
+     * @return A string representation of a release date.
+     */
+    String released();
+    /**
+     * Date of release DVD with that movie.
+     *
+     * @return A string representation of movie DVD date.
+     */
+    String dvd();
+}

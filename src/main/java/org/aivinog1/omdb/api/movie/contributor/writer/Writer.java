@@ -21,23 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.actor;
+package org.aivinog1.omdb.api.movie.contributor.writer;
 /**
- * This is a base interface for an actor. You can get, for example his name.
+ * This is a base class to work with a movie writer.
  *
  * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.actor.Actors
+ * @see org.aivinog1.omdb.api.movie.contributor.writer.Writers
  * @since 0.0.1
- * @todo #5:30m Let's implement this interface.
- *  It should represent an actor from API.
- *  For now there is no implementation for it.
+ * @todo #5:30m Needs to implement this interface.
+ *  It should represent a movie writer.
  */
-public interface Actor {
+public interface Writer {
     /**
-     * An actor's name.
-     *
-     * @return String's representation of a name
+     * Writer's name.
+     * @return String representation a writer's name.
      */
     String name();
 }

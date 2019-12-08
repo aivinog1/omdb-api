@@ -21,25 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.actor;
+package org.aivinog1.omdb.api.movie.contributor.director;
 
 /**
- * This is an interface for working with a numerous of
- * {@link org.aivinog1.omdb.api.movie.actor.Actor}.
- *
+ * This is a base interface for a director.
  * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.actor.Actor
  * @since 0.0.1
  * @todo #5:30m Let's implement this interface.
- *  It should work with {@link org.aivinog1.omdb.api.movie.actor.Actor}
- *  For now there is no implementation for it.
+ *  It should return Director with a name.
  */
-public interface Actors {
+public interface Director {
     /**
-     * Iterate over actors.
+     * Director's name.
      *
-     * @return Iterable of actors.
+     * @return String representation director's name.
      */
-    Iterable<Actor> iterate();
+    String name();
 }

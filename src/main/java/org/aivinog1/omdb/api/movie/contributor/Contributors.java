@@ -21,25 +21,44 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.aivinog1.omdb.api.movie.director;
+package org.aivinog1.omdb.api.movie.contributor;
+
+import org.aivinog1.omdb.api.movie.contributor.actor.Actors;
+import org.aivinog1.omdb.api.movie.contributor.director.Directors;
+import org.aivinog1.omdb.api.movie.contributor.writer.Writers;
 
 /**
- * This is interface for working with a numerous of
- * {@link org.aivinog1.omdb.api.movie.director.Director}.
+ * This is a base interface for working with a movie
+ * contributors.
  *
  * @author Alexey Vinogradov (vinogradov.a.i.93@gmail.com)
  * @version $Id$
- * @see org.aivinog1.omdb.api.movie.director.Director
+ * @see org.aivinog1.omdb.api.movie.contributor.actor.Actors
+ * @see org.aivinog1.omdb.api.movie.contributor.director.Directors
+ * @see org.aivinog1.omdb.api.movie.contributor.writer.Writers
  * @since 0.0.1
- * @todo #5:30m We needs to implements this class.
- *  It should work with numerous of
- *  {@link org.aivinog1.omdb.api.movie.director.Director}
+ * @todo #22:30m Let's implement this interface.
+ *  It should represent contributors (actors, directors) from API.
+ *  For now there is no implementation for it.
  */
-public interface Directors {
+public interface Contributors {
     /**
-     * Iterate over existing directors.
+     * A movie
+     * {@link org.aivinog1.omdb.api.movie.contributor.director.Directors}.
      *
-     * @return Iterable over directors.
+     * @return Directors of a movie.
      */
-    Iterable<Director> iterate();
+    Directors directors();
+    /**
+     * A movie {@link org.aivinog1.omdb.api.movie.contributor.writer.Writers}.
+     *
+     * @return Writers of a movie.
+     */
+    Writers writers();
+    /**
+     * A movie {@link org.aivinog1.omdb.api.movie.contributor.actor.Actors}.
+     *
+     * @return Actors that participate in a movie.
+     */
+    Actors actors();
 }
